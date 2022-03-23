@@ -17,7 +17,7 @@
 </head>
 <body>
   <main class="main-container">
-    <h1 class="title"> SPLI <br/> TTER</h1>
+    <h1 class="title"> SPLI<br/>TTER</h1>
     <div class="main-content">
       <div class="left-container">
         <div class="bill">
@@ -50,21 +50,23 @@
         </div>
       </div>
       <div class="right-container">
-        <div class="tip-details">
+        <div class="details">
+          <div class="tip-details">
+            <div class="amount-detail">
+              <p class="tip-amount">
+                Tip Amount <br/> <span class="person">/person</span>
+              </p>
+              <p class="total-amount">
+                0.00
+              </p>
+            </div>
+          </div>
           <div class="amount-detail">
             <p class="tip-amount">
-              Tip Amount <br/> /person
+              Total <br/> <span class="person">/person</span>
             </p>
-            <p class="total-amount">
-              0.00
-            </p>
+            <p class="total-amount" id="total-amount-per-person">$0.00</p>
           </div>
-        </div>
-        <div class="amount-detail">
-          <p class="tip-amount">
-            Total <br/> /person
-          </p>
-          <p class="total-amount" id="total-amount-per-person">$0.00</p>
         </div>
         <button class="reset-button">Reset</button>
       </div>
