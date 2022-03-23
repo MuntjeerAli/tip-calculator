@@ -16,7 +16,7 @@ const totalBillPerPerson = function(totalTip) {
     const amountPerPerson = document.getElementById('total-amount-per-person');
 
     if(isNumeric(totalPerPerson)){
-        return (amountPerPerson.innerHTML = `$${totalPerPerson}`);
+        return (amountPerPerson.innerHTML = `$${totalPerPerson}`)
     }
 }
 const tipPerPerson = function(){
@@ -25,7 +25,7 @@ const tipPerPerson = function(){
     const tipPerPersonNode = document.getElementById('total-tip-per-person');
 
     if(isNumeric((totalTip/totalPeople).toFixed(2))){
-        totalBilPerPerson(totalTip);
+        totalBillPerPerson(totalTip);
         return (tipPerPersonNode.innerHTML = `$${(totalTip / totalPeople).toFixed(2)}`);
     }
 }
@@ -57,10 +57,10 @@ const tipInput = function (event) {
     let tipNode = document.getElementsByClassName('tip-value-active')[0];
 
     if(tipNode !== undefined){
-        tipInput.classList.remove('tip-value-active');
+        tipNode.classList.remove('tip-value-active');
     }
 
-    event.target.className += 'tip-value-active';
+    event.target.className += ' tip-value-active';
 
     tipSelected = Number(event.target.value);
 
