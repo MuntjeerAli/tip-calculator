@@ -72,3 +72,31 @@ const tipInput = function (event) {
     }
 };
 
+const resetEverything = function () {
+    const inputNodeList = document.getElementsByTagName('input');
+
+    for (const node of inputNodeList) {
+        node.value = '';
+    }
+    totalBill = 0;
+    totalPeople = 0;
+    tipSelected = 0;
+
+    let buttonNodeList = document.getElementsByTagName('button');
+
+    for (const node of buttonNodeList) {
+        if (node.classList.contains('tip-value-active')) {
+            node.classList.remove('tip-value-active');
+        }
+    }
+
+    const errorNodeList = document.getElementsByClassName('error-message');
+    for (const node of errorNodeList) {
+        node.style.display = 'none';
+    }
+
+    document.getElementById('total-tip-per-person').innerText = '$0.00';
+    document.getElementById('total-amount-per-person').innerText = '$0.00';
+};
+
+resetEverything();
